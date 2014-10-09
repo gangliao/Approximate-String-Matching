@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
 {
 
     //pattern length = 32
-    string pattern = "g t t gg c a g c agtcgatcaaattgccgatccga";
+    string pattern = "gttggcagcagtcgatcaaattgccgatccga";
     
     //text length = 256
     string text =   "gttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccaatgataaattcggttggcagcttagtcgatcaaaatgcccatcccacggttggcagcagtcgatcaaatcgaccaccgatgcagatcggttggcagcagtcgatttgccgatccgagtgcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
