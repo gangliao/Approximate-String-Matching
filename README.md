@@ -1,6 +1,6 @@
-#Approximate String Matching#
+##Approximate String Matching##
 
-##KAUST AMCS 260 Final Project##
+###KAUST AMCS 260 Final Project###
 
 **Team Member :** 
 
@@ -14,9 +14,9 @@
 
 >King Abdullah University of Science and Technology (KAUST)
 >
->Computer, Electrical and Mathematical Sciences and Engineering (CEMSE) Division, Saudi Arabia
+>Computer, Electrical and Mathematical Sciences and Engineering (CEMSE) Division
 
-##1. Introduction##
+###1. Introduction###
 
 String matching algorithms are an important class of algorithms in Computer Science used to solve some famous problems mainly `DNA strings matching, text processing, spell checking, spam filtering`. 
 
@@ -28,26 +28,26 @@ A slightly different but more interesting problem is `approximate string matchin
 
 Approximate string matching is one of the main problems in classical algorithms, with applications to `text searching, computational biology, pattern recognition, etc.` Many algorithms have been presented that improve approximate string matching, for instance [1-6]. We decide to implement two of them and compare them via the time and space complexity.
 
-##2. TimeLine##
+###2. TimeLine###
 
-###September###
- * Review and research on the topic and its applications
- * Review specific papers on the two algorithms chosen
- * Task dispatching among team members
+####September####
+- [x] ~~Review and research on the topic and its applications~~
+- [x] ~~Review specific papers on the two algorithms chosen~~
+- [x] ~~Task dispatching among team members~~
 
-###October###
- * Implementation of the algorithms
- * Preparation of Midterm Presentation
- * Preparation of Midterm Report
+####October####
+- [x] ~~Implementation of the algorithms~~
+- [ ] Preparation of Midterm Presentation
+- [ ] Preparation of Midterm Report
 
-###November###
- * Evaluation of the implemented algorithms on different case studies
- * Analysis of time and space complexity of the algorithms
- * Synthesis and comparison of the algorithms
- * Work on improving the existing algorithms as future work
- * Preparation of Final Presentation and Report
+####November####
+- [ ] Evaluation of the implemented algorithms on different case studies
+- [ ] Analysis of time and space complexity of the algorithms
+- [ ] Synthesis and comparison of the algorithms
+- [ ] Work on improving the existing algorithms as future work
+- [ ] Preparation of Final Presentation and Report
 
-##References##
+###References###
 
 ```
 [1] E. Ukkonen, Finding approximate patterns in strings, Journal of algorithms, vol. 6, no. 1,pp. 132{137, 1985.
