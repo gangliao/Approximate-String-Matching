@@ -24,7 +24,7 @@ The idea behind them is to quickly find the first or all occurrences of a string
 
 A slightly different but more interesting problem is `approximate string matching problem`, which is the problem we chose to work on for our project. For the approximate string matching problem we look for a substring that is similar to pattern P in text T. The word similar here refers to a string that needs a minimum number of operations (`insertion, deletion and substitution`) to be converted to P. `This minimum number of operations is what we refer to as the edit distance.` 
 
-[In our proposal](http://www.luminpdf.com/files/5733678/algorithm_proposal.pdf), we will try to give a brief overview on the `two approximate string matching algorithms` we chose to work with, [2][6].
+[In our proposal](https://drive.google.com/file/d/0B2t5vXTh12G3TWl4NXRKQUFfT3M/view?usp=sharing), we will try to give a brief overview on the `two approximate string matching algorithms` we chose to work with, [2][6].
 
 Approximate string matching is one of the main problems in classical algorithms, with applications to `text searching, computational biology, pattern recognition, etc.` Many algorithms have been presented that improve approximate string matching, for instance [1-6]. We decide to implement two of them and compare them via the time and space complexity.
 
