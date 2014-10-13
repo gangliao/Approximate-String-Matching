@@ -28,12 +28,16 @@ int main(int argc, const char * argv[])
 
     //pattern length = 32
     string pattern = "gttggcagcagtcgatcaaattgccgatccga";
-    
+    /*test data
+    31: gttggcagcagtcgatcaaattgccgatccaa           error = 1
+    53 : gttggcagcttagtcgatcaaaatgcccatcccacggtt    error = 10
+    113: gttggcagcagtcgatcaaattgccgatccgaagtctcaaa  error = 9
+    */
     //text length = 256
     string text =   "gttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccaatgataaattcggttggcagcttagtcgatcaaaatgcccatcccacggttggcagcagtcgatcaaatcgaccaccgatgcagatcggttggcagcagtcgatttgccgatccgagtgcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
-    cout << text.length() << endl;
+    //cout << text.length() << endl;
     //asuume the numbers of error k is 10
-    int k = 10;
+    int k = 10; // allowed errors
     
     unsigned int set[26]; // all the postions of each character c in pattern p
     
@@ -55,12 +59,14 @@ int main(int argc, const char * argv[])
     
     R[pre][0] = 0; //if the length of the text == 0 and error k == 0
     
+    //firstly , we need to get R0 table using shift-and algorithm
+    //under bit-parallel
     for(int i = 1 ; i <= 256; i++){
         
         R[pre][i] = ((R[pre][i - 1] >> 1) | BIT) & set[INDEX(text[i - 1])];
     }
     
-    
+    //R0 -> R1 -> R2 ... -> Rk
     for(int i = 1; i <= k; i++)
     {
         R[cur][0] = 0;
@@ -68,7 +74,8 @@ int main(int argc, const char * argv[])
             R[cur][0] |= (1 << (31 - i)); //if the length of the text == 0 and error k == i
         }
         
-        
+        //O(kn*(m/w)) = O(kn)
+        //m = 32 = 4 bytes = one integer  (n = 256, k = 10)
         for(int j = 1; j <= 256; j++){
             
             R[cur][j] = ((R[cur][j - 1] >> 1) & set[INDEX(text[j - 1])]) |
