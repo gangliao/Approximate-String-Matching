@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
 {
 
     //pattern length = 32
-    string pattern = "gttggcagcagtcgatcaaattgccgatccga";
+    string pattern = "gttggcagc  agtcgatcaaa t tgcc g atcc g a";
     /*test data
     31: gttggcagcagtcgatcaaattgccgatccaa           error = 1
     53 : gttggcagcttagtcgatcaaaatgcccatcccacggtt    error = 10
