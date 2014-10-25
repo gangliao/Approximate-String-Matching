@@ -72,7 +72,7 @@ int main(int argc, const char * argv[])
     {
         R[cur][0] = 0;
         for(int j = 0; j < i; j++) {
-            R[cur][0] |= (1 << (31 - i)); //if the length of the text == 0 and error k == i
+            R[cur][0] |= (1 << (31 - j)); //if the length of the text == 0 and error k == i
         }
         
         //O(kn*(m/w)) = O(kn)
