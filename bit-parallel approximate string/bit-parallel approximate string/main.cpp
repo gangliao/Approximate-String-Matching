@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
 {
 
     //pattern length = 32
-    string pattern = "gttggcagc  agtcgatcaaattgccgatccga";
+    string pattern = "gttggcagcagtcgatcaaattgccgatccga";
     //                gttggcagcttagtcgatcaaaatgcccatccca cggtt
     /*test data
     31: gttggcagcagtcgatcaaattgccgatccaa           error = 1
@@ -35,7 +35,7 @@ int main(int argc, const char * argv[])
     113: gttggcagcagtcgatcaaattgccgatccgaagtctcaaa  error = 9
     */
     //text length = 256
-    string text =   "gttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccaatgataaattcggttggcagcttagtcgatcaaaatgcccatcccacggttggcagcagtcgatcaaatcgaccaccgatgcagatcggttggcagcagtcgatttgccgatccgagtgcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
+    string text = "gttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccaatgataaattcggttggcagcttagtcgatcaaaatgcccatcccacggttggcagcagtcgatcaaatcgaccaccgatgcagatcggttggcagcagtcgatttgccgatccgagtgcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
     //cout << text.length() << endl;
     //asuume the numbers of error k is 10
     int k = 10; // allowed errors
