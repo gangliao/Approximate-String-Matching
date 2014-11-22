@@ -38,7 +38,7 @@ int main(int argc, const char * argv[])
     string text = "gttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccaatgataaattcggttggcagcttagtcgatcaaaatgcccatcccacggttggcagcagtcgatcaaatcgaccaccgatgcagatcggttggcagcagtcgatttgccgatccgagtgcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
     //cout << text.length() << endl;
     //asuume the numbers of error k is 10
-    int k = 10; // allowed errors
+    int k = 1; // allowed errors
     
     unsigned int set[26]; // all the postions of each character c in pattern p
     
@@ -97,7 +97,7 @@ int main(int argc, const char * argv[])
          if(R[pre][i] & 1)
          {
              sum++;
-             cout << "#" << sum << endl;
+             cout << "#" << i << endl;
              for (int j = 0; j < i; j++) {
                  cout << text[j];
              }
