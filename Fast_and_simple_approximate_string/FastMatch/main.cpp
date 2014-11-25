@@ -13,10 +13,13 @@
 #include <math.h>
 using namespace std;
 
-
-//change the lower case letter to integer
-//we suppose there are only lower case letters. Of course we can change the range to capital letters.
-#define INDEX(c)    ((c) - 'a')
+void read_data(char *filename, char *buffer, int num){
+    FILE *fh;
+    fh = fopen(filename, "r");
+    fread(buffer, 1, num, fh);
+    buffer[num] = '\0';
+    fclose(fh);
+}
 
 //the edit distance of string1 and string2
 int edit_dist(string string1, string string2)
@@ -57,13 +60,13 @@ void bcTable(string p, unsigned int* bc, int seg_length)
 {
     int i;
     for (i = 0; i < p.length(); i++)
-        bc[INDEX(p[i])] = bc[INDEX(p[i])] | (1 << (p.length()-i-1));
-    for(i = 0;i<26;i++)
+        bc[p[i]] = bc[p[i]] | (1 << (p.length()-i-1));
+    for(i = 0;i<256;i++)
     {
         int j;
         int k;
         int value=seg_length+1;
-       for(j=0;j<p.length();j=j+seg_length)
+        for(j=0;j<p.length();j=j+seg_length)
         {
             for(k=1;k<=seg_length+1;k++)
                 if (((bc[i]>>j)&(1<<(k-1))) != 0) break;
@@ -120,24 +123,37 @@ int fastmach(string text,string pattern,string textWindow,string patternWindow,i
 
 
 int main(int argc, const char * argv[]) {
+    while (1) {
     
+    clock_t start, end;
+    char* filename = "/Users/gang/gangliao/code/Approximate-String-Matching/bit-parallel approximate string/etext99";
+    int len;										//input size
+    char *data;									//data set pointer
+    double runTime;
+    
+    printf("Please input the size of dataset you want to evaluate: \t");
+    scanf("%d", &len);
+    
+    data = (char *) malloc((len+1)*sizeof(char));
+    read_data(filename, data, len);
+    
+    string text = data;
+
     //pattern length must be power(2,integer), such as 4, 8, 16, 32, ...
     //pattern length = 32
-    string pattern = "gttggcagcagtcgatcaaattgccgatccga";
+    string pattern = "abababababababababababababababababababbabababab";
+        pattern =pattern.substr(0,32);
     
-    //text length = 256
-    string text =   "gttggcagcagtcgatcaaattgccgatccgawwgttggcagcagtcgatcaaattgccgatccgagttggcagcagtcgatcaaattgccgatccgagtt"\
-"ggcgtcgatcaaaatgcccatjjjjjcccacggttggcagcagtcgatcaaatcgaccaccgggcagcagtcgattgagtgcagtcgatcaaattgccgatccgagttgg"\
-    "cagcagtcgatcaaattgccgatccgaagtctcaaattgccgatc";
+    int k=1;   // the error limit: k
     
-    int k=3;   // the error limit: k
-    
-    unsigned int bc[26];   //bcTable
-    for (int i=0;i<26;i++)
+    unsigned int bc[256];   //bcTable
+    for (int i=0;i<256;i++)
         bc[i] = 0;    // Initialize bcTable = 0;
     
     vector<int> kl = segLength(k);
     vector<int> value;
+    
+    start = clock();
     
     int n=(int)kl.size();   // the steps we use in recursive function fastmach
     int segmentLength=(int)pattern.length()/pow(2, n); // the smallest length of pattern segments
@@ -148,17 +164,8 @@ int main(int argc, const char * argv[]) {
     string patternWindow;
     int textWindowStart;
     
-    printf("the length of pattern is %d \n",(int)pattern.length());
-    printf("the length of text is %d \n",(int)text.length());
-    cout << "the pattern is " + pattern <<endl;
-    cout << "the text is " + text <<endl;
     
     
-    cout << endl << "the bcTable is "<<endl;
-    for (int i =0;i<26;i++)
-        cout << bc[i] << " ";   // the results of bcTable
-    
-    cout << endl <<endl << "We list those textWindows which meet the requirements:" <<endl <<endl;
     for (int j=0; j<pow(2, n);j++)
     {
         int i = 0;
@@ -186,11 +193,11 @@ int main(int argc, const char * argv[]) {
                     if (m==value.size())
                     {
                         value.push_back(start);
-                        printf("The textWindow's start position in text is %d \n", start+1);
+                        //printf("The textWindow's start position in text is %d \n", start+1);
                         int textend = start+(int)pattern.length()+2*k;
                         if (textend > text.length())
                             textend = (int) text.length();
-                        cout<< "the textWindow is " + text.substr(start,textend-start) <<endl<<endl;
+                        //cout<< "the textWindow is " + text.substr(start,textend-start) <<endl<<endl;
                     }
                 }
                 
@@ -198,11 +205,15 @@ int main(int argc, const char * argv[]) {
             
             if (i+patternWindow.length()>text.length()-1)
                 break;
-            i=i+bc[INDEX(text[i+patternWindow.length()])];
+            i=i+bc[text[i+patternWindow.length()]];
             if ((i+patternWindow.length())>text.length()-1)
                 break;
         }
     }
     
+    end = clock();								//record the end time
+    runTime = (end - start) / (double) CLOCKS_PER_SEC ;   //run time
+    cout << "NUM: "<< len <<"\t Time: " << runTime << " Sec"<<endl;
+    }
     return 0;
 }

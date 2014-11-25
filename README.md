@@ -41,11 +41,11 @@ Approximate string matching is one of the main problems in classical algorithms,
 - [x] ~~Preparation of Midterm Report~~ 
 
 ####November####
-- [ ] Evaluation of the implemented algorithms on different case studies
-- [ ] Analysis of time and space complexity of the algorithms
-- [ ] Synthesis and comparison of the algorithms
-- [ ] Work on improving the existing algorithms as future work
-- [ ] Preparation of Final Presentation and Report
+- [x] ~~Evaluation of the implemented algorithms on different case studies~~
+- [x] ~~Analysis of time and space complexity of the algorithms~~
+- [x] ~~Synthesis and comparison of the algorithms~~
+- [x] ~~Work on improving the existing algorithms as future work~~
+- [x] ~~Preparation of Final Presentation and Report~~
 
 ###References###
 

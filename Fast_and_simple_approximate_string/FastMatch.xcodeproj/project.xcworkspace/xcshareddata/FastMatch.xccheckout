@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7B69C960-C230-4A04-A467-B971372E4FA2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FastMatch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3E509B60B4B048A48576E65C3CA9239E9FEC617C</key>
+		<string>https://github.com/GangLiao/Approximate-String-Matching.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fast_and_simple_approximate_string/FastMatch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3E509B60B4B048A48576E65C3CA9239E9FEC617C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GangLiao/Approximate-String-Matching.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3E509B60B4B048A48576E65C3CA9239E9FEC617C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3E509B60B4B048A48576E65C3CA9239E9FEC617C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Approximate-String-Matching</string>
+		</dict>
+	</array>
+</dict>
+</plist>
