@@ -6,7 +6,7 @@
 
 >Gang Liao, liao.gang@kaust.edu.sa
 >
->Fatima Zohra Smailiy, fatimazohra.smaili@kaust.edu.sa
+>Fatima Zohra Smaili, fatimazohra.smaili@kaust.edu.sa
 >
 >Wentao Hu, wentao.hu@kaust.edu.sa
 >
