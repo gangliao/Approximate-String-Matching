@@ -37,7 +37,7 @@ Approximate string matching is one of the main problems in classical algorithms,
 
 ####October####
 - [x] ~~Implementation of the algorithms~~
-- [x] ~~Preparation of Midterm Presentation~~  `Gang and Fatima did the midterm presentation.`
+- [x] ~~Preparation of Midterm Presentation~~  `Gang and Fatima gave the midterm presentation.`
 - [x] ~~Preparation of Midterm Report~~ 
 
 ####November####
@@ -45,7 +45,9 @@ Approximate string matching is one of the main problems in classical algorithms,
 - [x] ~~Analysis of time and space complexity of the algorithms~~
 - [x] ~~Synthesis and comparison of the algorithms~~
 - [x] ~~Work on improving the existing algorithms as future work~~
-- [x] ~~Preparation of Final Presentation and Report~~
+- [x] ~~Preparation of Final Presentation and Report~~ `Wentao and Guangming gave the final presentation.`
+
+`Thank all you guys for hardwork!`
 
 ###References###
 
